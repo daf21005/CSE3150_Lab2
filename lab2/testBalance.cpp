@@ -23,21 +23,17 @@ TEST_CASE("generateRandList has n +1s and n -1s") {
         if (x == -1) numMinus++;
     }
     
-    CHECK(numPlus == 5);   // Should have 5 +1s
-    CHECK(numMinus == 5);  // Should have 5 -1s
+    CHECK(numPlus == 5);   // should have 5 +1s
+    CHECK(numMinus == 5);  // should have 5 -1s
 }
 
 TEST_CASE("fisherYatesShuffle with fixed seed produces known result") {
-    srand(12345);  // Fixed seed for reproducibility
+    srand(12345);  // fixed seed for reproducibility
     
     std::vector<int> list = {1, 2, 3, 4, 5};
     fisherYatesShuffle(list);
     
-    // With seed 12345, we get a specific shuffle
-    // Run once to find out what it is, then test it
-    // Note: This is compiler/platform dependent!
-    
-    // Just verify it's different from original
+    // run once to find out what it is, then test it
     bool isDifferent = false;
     std::vector<int> original = {1, 2, 3, 4, 5};
     for (int i = 0; i < list.size(); i++) {

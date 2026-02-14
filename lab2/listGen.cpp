@@ -7,12 +7,6 @@
 // for this lab, ima try not to use the namespace std
 // using namespace std;
 
-// notes from the lecture:
-// ( <- represnts +1 ) <- represents -1   for this lab we don't the prefix sum to be negative
-// we want to ask the user how many times to scramble the array and then do the check
-    // std::cout << randList[2*n] << std::endl;
-    // after the array is generated we scramble the array using the Fisher-Yates algorithm:
-    // then finally we call the prefix sum to check if the array's prefix sum doesn't go bellow 0:
 
 // generates the 2n array, first half is +1 while the second half is -1
 std::vector<int> generateRandList(int n){
@@ -87,7 +81,7 @@ double runExperiments(int n, int numTrials) {
     // run the experiment numTrials times
     for (int i = 0; i < numTrials; i++) {
         if (runSingleExperiment(n)) {
-            balancedCount++;  // count successful balanced lists
+            balancedCount++;  // count successful balanced lists (sum is equal to 0)
         }
     }
     

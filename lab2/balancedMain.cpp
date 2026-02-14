@@ -25,9 +25,6 @@ int main(){
     std::cout << "Results: " << std::endl;
     std::cout << "Balanced: " << (int)(ratio * numTrials) << "/" << numTrials << std::endl;
     std::cout << "Ratio: " << ratio << " (" << (ratio * 100) << "%)" << std::endl;
-    //std::cout << ratio << std::endl;
-
     
-
     return 0;
 }
